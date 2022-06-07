@@ -3,6 +3,7 @@ import logoGeek from '../../img/Logo.png'
 import NavLink from '../NavLink/NavLink';
 import "./navbar.css"
 import "../NavLink/navlink.css"
+import CartWidget from './CartWidget';
 
 export default function NavBar() {
     const handleClick = () => {
@@ -26,6 +27,7 @@ export default function NavBar() {
                         <NavLink title= "Yu-Gi-Oh"/>
                     </ul> */}
                 </NavLink>
+                <CartWidget/>
             </ul>
         </nav>
     );

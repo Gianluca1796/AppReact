@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
 
 /* .list__item:hover .sublist{
     display: block;
 } */
 .list__item{
     cursor: pointer;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    letter-spacing: .1em;
 }
