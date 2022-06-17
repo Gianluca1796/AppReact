@@ -1,13 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-
-
-/* .list__item:hover .sublist{
-    display: block;
-} */
-.list__item{
+.list__item {
     cursor: pointer;
     font-size: 2em;
-    color: #fff;
+    color: black;
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: .1em;
+}
+
+.list__item:hover {
+    display: inline-block;
+    position: relative;
+    color: black;
+}
+.centerSides::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: left right;
+    transition: transform 0.25s ease-out;
+}
+.centerSides:hover::after {
+    transform: scaleX(1);
+    transform-origin: right left;
 }

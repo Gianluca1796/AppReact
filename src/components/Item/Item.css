@@ -1,6 +1,35 @@
 .price{
     font-size: 2rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 .name{
-    font-size: 4rem;
+    font-size: 14px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.description{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.item__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    width: 350px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+.item__card:hover{
+    cursor: pointer;
+    box-shadow: 27px 42px 21px -3px rgba(0,0,0,0.1);
+    position: relative;
+    transition: 0.5s ease-in;
+}
+
+.item__description{
+    margin-left: 5rem;
+    width: 100%;
+    text-align: left;
 }

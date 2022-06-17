@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { productos } from "../../mock/products";
-import ItemList from "../ItemList/ItemList";
+import ItemDetail from "./ItemDetail";
 
-import "./itemlistcontainer.css"
 
-export default function ItemListContainer(props) {
-    const [products, setProducts] = useState([])
+export default function ItemDetailContainer(props) {
+    const [product, setProduct] = useState([{}])
     useEffect(() => {
-        const recibirProductos = new Promise ((res, rej) => {
+        const recibirProducto = new Promise ((res, rej) => {
             setTimeout(() => {
-                res(productos)
+                res(productos[0])
             }, 600);
         })
-        recibirProductos
+        recibirProducto
         .then((res)=>{
-            setProducts(res)
+            setProduct(res)
         })
         .catch((error) => {
             console.log("error")
@@ -23,7 +22,7 @@ export default function ItemListContainer(props) {
     return (
         <>
         <div className="list-container">{props.greetings}</div>
-        <ItemList items={products}/>
+        <ItemDetail item={product}/>
         </>
     )
 }

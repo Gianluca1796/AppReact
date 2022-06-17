@@ -5,6 +5,7 @@ export const productos = [
         price: 5000,
         stock: 2,
         img: "./img/funko-alakazam.png",
+        description:  "Funko Pop! Pokémon: Alakazam #855",
         category: "Figuras",
     },
     {
@@ -13,6 +14,7 @@ export const productos = [
         price: 5500,
         stock: 1,
         img: "./img/funko-charizard.png",
+        description:  "lorem",
         category: "Figuras",
     },
     {
@@ -21,6 +23,7 @@ export const productos = [
         price: 5000,
         stock: 5,
         img: "./img/funko-pidgeotto.jpg",
+        description:  "lorem",
         category: "Figuras",
     },
     {
@@ -28,7 +31,8 @@ export const productos = [
         name: "Pokemon Azul GB",
         price: 12500,
         stock: 2,
-        img: "./img/pokemon-azul.webp",
+        img: "./img/pkmn-blue.jpg",
+        description: "lorem" ,
         category: "Videojuegos",
     },
     {
@@ -36,7 +40,8 @@ export const productos = [
         name: "Pokemon Ruby GBA",
         price: 10000,
         stock: 3,
-        img: "./img/pokemon-ruby.jpg",
+        img: "./img/pkmn-ruby.png",
+        description: "lorem" ,
         category: "Videojuegos",
     },
     {
@@ -45,6 +50,7 @@ export const productos = [
         price: 49000,
         stock: 2,
         img: "./img/charizard-card.png",
+        description: "lorem" ,
         category: "Cartas Coleccionables",
     },
     {
@@ -53,6 +59,7 @@ export const productos = [
         price: 15000,
         stock: 4,
         img: "./img/alakazam-card.jpg",
+        description: "lorem" ,
         category: "Cartas Coleccionable",
     },
 ];

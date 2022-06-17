@@ -1,0 +1,6 @@
+.item__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
