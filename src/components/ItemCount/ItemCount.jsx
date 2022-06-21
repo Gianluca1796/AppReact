@@ -9,7 +9,7 @@ function ItemCount({ stock, initial }) {
             setCount(count + 1)
         }
     }
-    const resta = () => {
+    const resta = () => {   
         if(count>0){
             setCount(count - 1)
         }

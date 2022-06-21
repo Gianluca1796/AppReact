@@ -4,10 +4,10 @@
     color: black;
     font-family: 'Kdam Thmor Pro', sans-serif;
     letter-spacing: .1em;
+    text-decoration: none;
 }
 
 .list__item:hover {
-    display: inline-block;
     position: relative;
     color: black;
 }

@@ -1,33 +1,28 @@
 
 import logoGeek from '../../img/Logo.png'
-import NavLink from '../NavLink/NavLink';
 import "./navbar.css"
 import "../NavLink/navlink.css"
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
-    const handleClick = () => {
-        console.log('click')
-    }
     return (
         <nav className="navbar">
             <img className="logo" src={logoGeek} alt="" />
             <ul className="navbar__list">
-                <NavLink handleClick={handleClick} title= "Figuras">
-                    {/* <ul className='sublist'>
-                        <NavLink title="Pokémon"/>
-                        <NavLink title="DBZ"/>
-                        <NavLink title="Otros"/>
-                    </ul> */}
-                </NavLink>
-                <NavLink handleClick={handleClick} title= "Videojuegos"/>
-                <NavLink handleClick={handleClick} title= "Cartas Coleccionables">
-                    {/* <ul className='sublist'>
-                        <NavLink title= "Pokémon"/>
-                        <NavLink title= "Yu-Gi-Oh"/>
-                    </ul> */}
-                </NavLink>
-                <CartWidget/>
+                <li>
+                    <NavLink className='list__item centerSides' to="/">Start</NavLink>
+                </li>
+                <li>
+                    <NavLink className='list__item centerSides' to="/category/Figuras">Figuras</NavLink>
+                </li>
+                <li>
+                    <NavLink className='list__item centerSides' to="/category/Videojuegos">Videojuegos</NavLink>
+                </li>
+                <li>
+                    <NavLink className='list__item centerSides' to="/category/Cartas Coleccionables">Cartas Coleccionables</NavLink>
+                </li>
+                <CartWidget />
             </ul>
         </nav>
     );
