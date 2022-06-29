@@ -1,4 +1,5 @@
 import React from 'react'
+import { memo } from 'react'
 import './Item.css'
 import { Link } from 'react-router-dom'
 
@@ -21,4 +22,4 @@ const Item = ({item}) => {
     )
 }
 
-export default Item
+export default memo(Item);

@@ -6,22 +6,22 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(cart)
-    },[cart])
+    }, [cart])
 
     const addToCart = (item, cant) => {
-        if(isInCart(item.id)){
+        if (isInCart(item.id)) {
             let index = cart.findIndex(i => i.id === item.id);
             let product = cart[index];
             product.cant = product.cant + cant;
 
             const newCart = [...cart];
-            newCart.splice(index,1, product)
+            newCart.splice(index, 1, product)
 
             setCart([...newCart])
-        }else{
-            setCart([...cart, {...item,cant}]);
+        } else {
+            setCart([...cart, { ...item, cant }]);
         }
     }
 
@@ -33,10 +33,14 @@ const CartProvider = ({ children }) => {
         setCart([])
     }
 
+    const deleteItem = (id) => {
+        const products = cart.filter(prod => prod.id !== id)
+        setCart(products)
+    }
     return (
-    <CartContext.Provider value={{cart, addToCart, clearCart}}>
-        {children}
-    </CartContext.Provider>
+        <CartContext.Provider value={{ cart, addToCart, clearCart, isInCart, deleteItem }}>
+            {children}
+        </CartContext.Provider>
     )
 };
 
