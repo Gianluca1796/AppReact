@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import './itemdetail.css'
 
 const ItemDetail = ({ item }) => {
-    const { addToCart, deleteItem, isInCart} = useContext(CartContext)
+    const { addToCart} = useContext(CartContext)
 
     const [cant, setCant] = useState(0)
 
@@ -29,9 +29,6 @@ const ItemDetail = ({ item }) => {
                 {
                     cant === 0 ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd} /> : <Link to={"/cart"}>Ir al carrito</Link>
                 }
-                {isInCart(item.id) && <button onClick={()=>deleteItem(item.id)}>
-                    Remover del carrito
-                </button>}
             </div>
         </div>
     )

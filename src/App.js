@@ -3,8 +3,8 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Cart from "./components/Cart/Cart";
 import CartProvider from "./context/CartContext";
+import CartView from "./components/CartView/CartView";
 // import {testDataBase} from "./services/firebaseConfig";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
               <Route path="/" element={<ItemListContainer greetings="Bienvenidos a Geek Zone!" />} />
               <Route path="/category/:categoryId" element={<ItemListContainer greetings="Categorías" />} />
               <Route path="/item/:itemId" element={<ItemDetailContainer greetings="Detalle del producto" />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<CartView />} />
             </Routes>
           </main>
         </BrowserRouter>
