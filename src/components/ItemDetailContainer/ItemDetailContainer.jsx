@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { productos } from "../../mock/products";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { getItem } from "../../services/firebaseConfig";
 
 
 export default function ItemDetailContainer(props) {
@@ -10,23 +10,16 @@ export default function ItemDetailContainer(props) {
     const { itemId } = useParams();
 
     useEffect(() => {
-        const recibirProducto = new Promise((res, rej) => {
-            setTimeout(() => {
-                let idNumber = parseInt(itemId)
-                const itemFounded = productos.find(item => {
-                    return item.id === idNumber 
-                })
-                res(itemFounded)
-            }, 600);
+        getItem(itemId)
+        .then((res) => {
+            setProduct(res);
         })
-        recibirProducto
-            .then((res) => {
-                setProduct(res)
-            })
-            .catch((error) => {
-                console.log("error")
-            });
+        .catch((error) => {
+            console.log(error, "error");
+        })
     }, [itemId])
+
+
     return (
         <>
             <div className="list-container">{props.greetings}</div>
@@ -34,3 +27,9 @@ export default function ItemDetailContainer(props) {
         </>
     )
 }
+
+
+
+
+
+
