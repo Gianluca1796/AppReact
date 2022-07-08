@@ -7,7 +7,6 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        console.log(cart)
     }, [cart])
 
     const addToCart = (item, cant) => {

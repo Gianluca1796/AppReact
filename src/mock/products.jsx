@@ -1,6 +1,5 @@
 export const productos = [
     {
-        id: 1,
         name: "Funko Alakazam",
         price: 5000,
         stock: 2,
@@ -9,7 +8,6 @@ export const productos = [
         category: "Figuras",
     },
     {
-        id: 2,
         name: "Funko Charizard",
         price: 5500,
         stock: 1,
@@ -18,7 +16,6 @@ export const productos = [
         category: "Figuras",
     },
     {
-        id: 3,
         name: "Funko Pidgeotto",
         price: 5000,
         stock: 5,
@@ -27,7 +24,6 @@ export const productos = [
         category: "Figuras",
     },
     {
-        id: 4,
         name: "Pokemon Azul GB",
         price: 12500,
         stock: 2,
@@ -36,7 +32,6 @@ export const productos = [
         category: "Videojuegos",
     },
     {
-        id: 5,
         name: "Pokemon Ruby GBA",
         price: 10000,
         stock: 3,
@@ -45,7 +40,6 @@ export const productos = [
         category: "Videojuegos",
     },
     {
-        id: 6,
         name: "Charizard TCG Original",
         price: 49000,
         stock: 2,
@@ -54,7 +48,6 @@ export const productos = [
         category: "Cartas Coleccionables",
     },
     {
-        id: 7,
         name: "Alakazam TCG Original",
         price: 15000,
         stock: 4,
