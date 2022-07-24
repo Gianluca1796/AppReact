@@ -15,7 +15,7 @@ const FormModal = () => {
             <Button color="success" onClick={showModal}>Comfirmar compra</Button>
             <div>
                 <Modal isOpen={modal}>
-                    <ModalHeader>Modal title</ModalHeader>
+                    <ModalHeader>Deja tus datos aqui</ModalHeader>
                     <ModalBody>
                         <CartForm />
                     </ModalBody>

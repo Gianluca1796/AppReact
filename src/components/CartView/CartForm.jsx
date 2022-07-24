@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { createBuyOrder } from "../../services/firebaseConfig";
 import { CartContext } from "../../context/CartContext";
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
 import "./CartView.css";
 
 const CartForm = () => {
@@ -37,6 +38,11 @@ const CartForm = () => {
         };
         createBuyOrder(dataOrder).then((orderDataCreated) => {
             clearCart();
+            Swal.fire({
+                icon: 'success',
+                title: 'Gracias por tu compra! Revisa tu casilla de correos para continuar.',
+                text: 'ID de su compra: ' + orderDataCreated.id,
+            });
         });
     };
     return (
