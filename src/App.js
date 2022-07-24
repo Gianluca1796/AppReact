@@ -5,10 +5,10 @@ import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CartProvider from "./context/CartContext";
 import CartView from "./components/CartView/CartView";
-// import {testDataBase} from "./services/firebaseConfig";
+
 
 function App() {
-  // testDataBase()
+
   return (
     <div className="App"> 
       <CartProvider> 

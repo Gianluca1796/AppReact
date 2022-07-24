@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
     return (
-        <nav className="navbar">
+        <nav className="nav-bar">
             <img className="logo" src={logoGeek} alt="" />
             <ul className="navbar__list">
                 <li>

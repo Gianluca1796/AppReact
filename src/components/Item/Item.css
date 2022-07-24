@@ -1,15 +1,18 @@
-.price{
+.price {
     font-size: 2rem;
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
-.name{
+
+.name {
     font-size: 14px;
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
-.description{
+
+.description {
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
-.item__card{
+
+.item__card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,15 +24,70 @@
     padding: 10px;
 
 }
-.item__card:hover{
+
+.item__card:hover {
     cursor: pointer;
-    box-shadow: 27px 42px 21px -3px rgba(0,0,0,0.1);
+    box-shadow: 27px 42px 21px -3px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: 0.5s ease-in;
 }
 
-.item__description{
+.item__description {
     margin-left: 5rem;
     width: 100%;
     text-align: left;
+}
+
+/* Boton */
+/* From uiverse.io by @alexmaracinaru */
+.cta {
+    border: none;
+    background: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

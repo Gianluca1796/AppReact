@@ -1,28 +1,30 @@
 
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-import CartForm from './CartForm'
+import './CartView.css'
+import FormModal from '../Modal/Modal'
 
 
 const CartView = () => {
 
-    const { cart, clearCart, deleteItem, totalInCart } = useContext(CartContext)
+    const { cart, deleteItem, totalInCart, clearCart } = useContext(CartContext)
 
-        const clearAll = () => {
-            clearCart()
-        }
-        
-        if (cart.length === 0) {
-            return <h1>No hay articulos en el carrito!</h1>
-        }
+    const clearAll = () => {
+        clearCart()
+    }
 
-        return (
-            <div>
+    if (cart.length === 0) {
+        return <h1>No hay articulos en el carrito!</h1>
+    }
+
+    return (
+        <>
+            <div className='cart-container'>
                 {
                     cart.map(item => (
                         <div key={item.id}>
-                            <div className='item__card'>
-                                <div className='item__description'>
+                            <div className='item__card card-in-cart'>
+                                <div className='item__description card-in-cart-description '>
                                     <h5 className='name'>{item.name}</h5>
                                     <h2 className='price'>${item.price}</h2>
                                     <ion-icon name="trash-outline" onClick={() => deleteItem(item.id)}></ion-icon>
@@ -33,16 +35,19 @@ const CartView = () => {
                         </div>
                     ))
                 }
+            </div>
+            <div className='cart-footer'>
                 <div>
-                    <div>
-                        <p>Total: ${totalInCart()}</p>
-                    </div>
-                    <button onClick={clearAll} >Vaciar carrito</button>
-                    <CartForm/>
+                    <p>Total: ${totalInCart()}</p>
+                    <button onClick={clearAll} className='btn btn-danger'>Vaciar carrito</button>
                 </div>
             </div>
-        )
-    }
+            <div className="confirm-button">
+                <FormModal />
+            </div>
+        </>
+    )
+}
 
 
 

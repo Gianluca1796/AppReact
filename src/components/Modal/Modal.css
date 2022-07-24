@@ -1,0 +1,40 @@
+.modal.fade.show{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.modal-body {
+    font-size: 1.8em;
+    height: 350px;
+}
+
+
+.btn.btn-danger{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+.btn.btn-success{
+    width: 200px;
+    height: 40px;
+    font-size: 2rem;
+}
+
+.modal-content{
+    height: auto ;
+    width: 400px ;
+}
+.modal-title{
+    font-size: 2em;
+}
+
+.btn.btn-secondary{
+    font-size: 1.5em;
+}
+.btn.btn-warning{
+    font-size: 1.5em;
+}
+.btn.btn-info{
+    font-size: 1.5em;
+}
